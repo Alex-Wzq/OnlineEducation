@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 @Api(description = "讲师登入系统")
 @RestController
-@CrossOrigin // 解决跨域
-@RequestMapping("/eduService/user")
+@CrossOrigin(origins = "*", allowCredentials = "true") // 解决跨域
+@RequestMapping("/eduservice/user")
 public class EduLoginController {
 
     @ApiOperation(value = "登入")

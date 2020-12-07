@@ -16,8 +16,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-;
-
 /**
  * <p>
  * 讲师 前端控制器
@@ -28,7 +26,8 @@ import java.util.List;
  */
 @Api(description = "讲师管理")
 @RestController
-@RequestMapping("/eduService/teacher")
+@RequestMapping("/eduservice/teacher")
+@CrossOrigin(origins = "*", allowCredentials = "true") // 解决跨域
 public class EduTeacherController {
 
     @Autowired
@@ -84,7 +83,7 @@ public class EduTeacherController {
      * @param teacherQuery
      * @return
      */
-    @PostMapping("pageTeacher/{current}/{limit}")
+    @PostMapping("pageTeacherCondition/{current}/{limit}")
     @ApiOperation(value = "带条件分页查询讲师")
     public R pageTeacherCondition(
             @ApiParam(name = "current", value = "当前页", required = true)

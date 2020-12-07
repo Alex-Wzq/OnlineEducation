@@ -1,0 +1,9 @@
+2020-12-07 20:28:40.383 [http-nio-8001-exec-2] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - Content type 'text/plain;charset=UTF-8' not supported
+2020-12-07 20:28:48.297 [http-nio-8001-exec-8] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
+2020-12-07 20:29:20.458 [http-nio-8001-exec-6] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
+2020-12-07 20:30:32.432 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
+2020-12-07 20:30:36.131 [http-nio-8001-exec-3] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - Request method 'POST' not supported
+2020-12-07 20:31:32.119 [http-nio-8001-exec-6] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - Content type 'text/plain;charset=UTF-8' not supported
+2020-12-07 20:32:55.913 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
+2020-12-07 20:34:27.586 [http-nio-8001-exec-5] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
+2020-12-07 20:42:08.710 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
