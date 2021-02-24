@@ -138,3 +138,15 @@ MyBatis Plus提供了MetaObjectHandler接口实现字段在创建和更新时的
 ## 日志
 1. 日志级别: OFF, FATAL, **ERROR**, **WARN**, **INFO**, **DEBUG**, ALL（后面包含前面, 要背的）
 2. 工具: Log4j, Logback
+
+## Maven
+1. maven &lt; packaging &gt; 打包标签有三种类型:
+   1. pom ---------> 父类型都为pom类型
+   2. jar ---------> 内部调用或者是作服务使用
+   3. war ---------> 需要部署的项目
+2. 父工程主要放依赖的版本和公共依赖
+   1. dependencyManagement：声明依赖但并未下载，只有子项目声明才下载到子项目，子项目不用声明版本号，使用父项目版本，子项目声明版本号则使用子项目版本。
+   2. dependencys：父项目的依赖，子项目都会有。
+
+## Others
+1. 《阿里巴巴Java开发手册》：规范数据可和java开发
