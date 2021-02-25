@@ -41,7 +41,7 @@ public class EduTeacherController {
     }
 
     /**
-     *
+     * PathVariable : 获取url的值
      * @param id
      * @return
      */

@@ -29,12 +29,12 @@ public class CodeGenerator {
         gc.setOutputDir("/Users/wzq/Desktop/Springboot项目实战/guli_parent/service/service_edu/src/main/java"); // 输出目录
 
         gc.setAuthor("testjava");
-        gc.setOpen(false); //生成后是否打开资源管理器(是否打开资源的目录)
-        gc.setFileOverride(false); //重新生成时文件是否覆盖
+        gc.setOpen(false); // 生成后是否打开资源管理器(是否打开资源的目录)
+        gc.setFileOverride(false); // 重新生成时文件是否覆盖
 
-        gc.setServiceName("%sService");	//去掉Service接口的首字母I
+        gc.setServiceName("%sService");	// 去掉Service接口的首字母I, IUserService -> UserService
 
-        gc.setIdType(IdType.ID_WORKER); //主键策略
+        gc.setIdType(IdType.ID_WORKER_STR); // 主键策略 long:ID_WORKER String:ID_WORKER_STR
         gc.setDateType(DateType.ONLY_DATE);//定义生成的实体类中日期类型
         gc.setSwagger2(true);//开启Swagger2模式
 
