@@ -34,3 +34,4 @@ build/
 
 ### LOG ###
 *.log
+/EDU_LOG/

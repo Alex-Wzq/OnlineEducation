@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suda.eduService.mapper.EduSubjectMapper">
+
+    <select id="getMaxSort" resultType="int">
+        SELECT MAX(sort) FROM edu_subject;
+    </select>
+
+    <select id="getID" resultType="String" parameterType="String">
+        SELECT DISTINCT id FROM edu_subject WHERE title = #{title};
+    </select>
+
+    <select id="getSubjectByTitle" resultType="com.suda.eduService.entity.EduSubject" parameterType="String">
+        SELECT * FROM edu_subject WHERE title = #{title} LIMIT 0, 1;
+    </select>
+
+</mapper>

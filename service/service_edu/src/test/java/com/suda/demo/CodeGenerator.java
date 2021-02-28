@@ -28,7 +28,7 @@ public class CodeGenerator {
         String projectPath = System.getProperty("/Users/wzq/Desktop/Springboot项目实战/guli_parent/service/service_edu/"); // 得到当前文件下目录
         gc.setOutputDir("/Users/wzq/Desktop/Springboot项目实战/guli_parent/service/service_edu/src/main/java"); // 输出目录
 
-        gc.setAuthor("testjava");
+        gc.setAuthor("ziqian.wang");
         gc.setOpen(false); // 生成后是否打开资源管理器(是否打开资源的目录)
         gc.setFileOverride(false); // 重新生成时文件是否覆盖
 
@@ -61,12 +61,12 @@ public class CodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("edu_teacher"); // 表名
+        strategy.setInclude("edu_subject"); // 表名
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
 
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);//数据库表字段映射到实体的命名策略
-        strategy.setEntityLombokModel(true); // lombok 模型 @Accessors(chain = true) setter链式操作
+        strategy.setEntityLombokModel(false); // lombok 模型 @Accessors(chain = true) setter链式操作
 
         strategy.setRestControllerStyle(true); //restful api风格控制器
         strategy.setControllerMappingHyphenStyle(true); //url中驼峰转连字符

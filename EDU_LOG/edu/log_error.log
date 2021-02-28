@@ -7,3 +7,43 @@
 2020-12-07 20:32:55.913 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
 2020-12-07 20:34:27.586 [http-nio-8001-exec-5] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
 2020-12-07 20:42:08.710 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - null
+2021-02-28 18:49:34.378 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - Unknown return value type: java.lang.Boolean
+2021-02-28 18:59:28.646 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'parentID' in 'where clause'
+### The error may exist in com/suda/eduService/mapper/EduSubjectMapper.java (best guess)
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT  id,title,parent_id,sort,gmt_create,gmt_modified  FROM edu_subject    WHERE  title = ? AND parentID = ?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'parentID' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'parentID' in 'where clause'
+2021-02-28 19:13:36.141 [http-nio-8001-exec-2] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+### The error may involve com.suda.eduService.mapper.EduSubjectMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_subject  ( id, title )  VALUES  ( ?, ? )
+### Cause: java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+; Field 'gmt_create' doesn't have a default value; nested exception is java.sql.SQLException: Field 'gmt_create' doesn't have a default value
+2021-02-28 19:15:17.051 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8001 or configure this application to listen on another port.
+
+2021-02-28 19:41:16.638 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '0' for key 'edu_subject.PRIMARY'
+### The error may involve com.suda.eduService.mapper.EduSubjectMapper.insert-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO edu_subject  ( id, title,   gmt_create, gmt_modified )  VALUES  ( ?, ?,   ?, ? )
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '0' for key 'edu_subject.PRIMARY'
+; Duplicate entry '0' for key 'edu_subject.PRIMARY'; nested exception is java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '0' for key 'edu_subject.PRIMARY'
+2021-02-28 19:42:49.230 [http-nio-8001-exec-2] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - Invalid bound statement (not found): com.suda.eduService.mapper.EduSubjectMapper.getMaxSort
+2021-02-28 19:46:12.492 [http-nio-8001-exec-1] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - Invalid bound statement (not found): com.suda.eduService.mapper.EduSubjectMapper.getMaxSort
+2021-02-28 20:12:43.172 [http-nio-8001-exec-2] ERROR c.s.s.exceptionHandler.GlobalExceptionHandler - Required request part 'file' is not present
