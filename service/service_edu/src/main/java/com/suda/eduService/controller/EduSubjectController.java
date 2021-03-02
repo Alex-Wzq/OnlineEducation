@@ -22,7 +22,7 @@ import org.springframework.web.multipart.MultipartFile;
  */
 @Api(description = "Subject管理")
 @RestController
-@RequestMapping("/eduService/edu-subject")
+@RequestMapping("/eduService/subject")
 @CrossOrigin(origins = "*", allowCredentials = "true") // 解决跨域
 public class EduSubjectController {
 

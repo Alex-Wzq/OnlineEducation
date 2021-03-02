@@ -23,8 +23,8 @@ public class EduCourseDescription implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "课程ID")
-    @TableId(value = "id", type = IdType.ID_WORKER_STR)
+    @ApiModelProperty(value = "课程描述ID, 和课程的ID相同")
+    @TableId(value = "id", type = IdType.INPUT)
     private String id;
 
     @ApiModelProperty(value = "课程简介")
