@@ -18,4 +18,8 @@ public interface EduSubjectMapper extends BaseMapper<EduSubject> {
     public String getID(String title);
 
     public EduSubject getSubjectByTitle(String title);
+
+    public EduSubject getOneSubjectByID(String id);
+
+    public EduSubject getTwoSubjectByID(String id);
 }

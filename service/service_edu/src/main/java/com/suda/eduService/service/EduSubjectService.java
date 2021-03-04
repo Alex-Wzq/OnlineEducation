@@ -16,4 +16,8 @@ public interface EduSubjectService extends IService<EduSubject> {
 
     public void saveSubject(MultipartFile file);
 
+    public EduSubject getOneSubjectByID(String id);
+
+    public EduSubject getTwoSubjectByID(String id);
+
 }

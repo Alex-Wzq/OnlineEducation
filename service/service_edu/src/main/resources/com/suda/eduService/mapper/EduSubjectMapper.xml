@@ -14,4 +14,12 @@
         SELECT * FROM edu_subject WHERE title = #{title} LIMIT 0, 1;
     </select>
 
+    <select id="getOneSubjectByID" resultType="com.suda.eduService.entity.EduSubject" parameterType="String">
+        SELECT * FROM edu_subject WHERE id = #{id} AND parent_id = '0';
+    </select>
+
+    <select id="getTwoSubjectByID" resultType="com.suda.eduService.entity.EduSubject" parameterType="String">
+        SELECT * FROM edu_subject WHERE id = #{id} AND parent_id != '0';
+    </select>
+
 </mapper>

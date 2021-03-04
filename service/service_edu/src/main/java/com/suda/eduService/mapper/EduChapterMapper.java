@@ -1,7 +1,9 @@
 package com.suda.eduService.mapper;
 
-import com.suda.eduService.entity.EduChapter;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.suda.eduService.entity.EduChapter;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,5 +14,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2021-02-28
  */
 public interface EduChapterMapper extends BaseMapper<EduChapter> {
+
+    public List<EduChapter> selectListByCourseID(String courseID);
 
 }

@@ -45,7 +45,7 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
         }
     }
 
-    public Boolean exitOneSubject(String title){
+    private Boolean exitOneSubject(String title){
         QueryWrapper<EduSubject> wrapper = new QueryWrapper<>();
         wrapper.eq("title", title);
         wrapper.eq("parent_id", 0);
@@ -53,14 +53,14 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
         return baseMapper.selectList(wrapper).size() > 0;
     }
 
-    public Boolean exitTwoSubject(String title){
+    private Boolean exitTwoSubject(String title){
         QueryWrapper<EduSubject> wrapper = new QueryWrapper<>();
         wrapper.eq("title", title);
 
         return baseMapper.selectList(wrapper).size() > 0;
     }
 
-    public void addTitle(String title, String parentID, int sort){
+    private void addTitle(String title, String parentID, int sort){
         EduSubject subject = new EduSubject();
         subject.setTitle(title);
         subject.setParentId(parentID);
@@ -68,4 +68,13 @@ public class EduSubjectServiceImpl extends ServiceImpl<EduSubjectMapper, EduSubj
         baseMapper.insert(subject);
     }
 
+    @Override
+    public EduSubject getOneSubjectByID(String id) {
+        return baseMapper.getOneSubjectByID(id);
+    }
+
+    @Override
+    public EduSubject getTwoSubjectByID(String id) {
+        return baseMapper.getTwoSubjectByID(id);
+    }
 }
